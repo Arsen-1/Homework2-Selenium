@@ -6,7 +6,7 @@ from selenium.webdriver.common.keys import Keys
 from selenium.webdriver import ActionChains
 
 
-class MouseHover:
+class TestMouseHover:
 
     def __init__(self):
 
@@ -16,7 +16,7 @@ class MouseHover:
         get_wait = WebDriverWait(self.driver, timeout=10)
 
 
-    def mouse_hover(self):
+    def test_mouse_hover(self):
         get_wait = WebDriverWait(self.driver, timeout=10)
         input_name = "Armen"
 
@@ -33,5 +33,5 @@ class MouseHover:
         # get_attribute('value') -> returns text in input field
         assert get_wait.until(expected_conditions.element_to_be_clickable((By.CSS_SELECTOR, 'input[id="name"]'))).get_attribute('value') != input_name
 
-test10 = MouseHover()
-test10.mouse_hover()
+test10 = TestMouseHover()
+test10.test_mouse_hover()

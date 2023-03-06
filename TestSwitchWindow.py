@@ -10,7 +10,7 @@ class TestSwitchWindow:
         self.driver.get("https://courses.letskodeit.com/practice")
         get_wait = WebDriverWait(self.driver, timeout = 10)
 
-    def switch_window(self):
+    def test_switch_window(self):
       get_wait = WebDriverWait(self.driver, timeout=20)
       switch_window = get_wait.until(expected_conditions.element_to_be_clickable((By.XPATH, "//*[text()='Open Window']")))
       switch_window.click()
@@ -19,4 +19,4 @@ class TestSwitchWindow:
       button.click()
       self.driver.switch_to.window("[class='overly']")
 test3 = TestSwitchWindow()
-test3.switch_window()
+test3.test_switch_window()

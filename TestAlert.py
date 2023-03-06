@@ -5,7 +5,7 @@ from selenium.webdriver.support.wait import WebDriverWait
 from selenium.webdriver.common.keys import Keys
 
 
-class Alert:
+class TestAlert:
 
     def __init__(self):
 
@@ -15,7 +15,7 @@ class Alert:
         get_wait = WebDriverWait(self.driver, timeout=10)
 
 
-    def alert(self):
+    def test_alert(self):
 
         #name = "Arsen"
         get_wait = WebDriverWait(self.driver, timeout=10)
@@ -48,5 +48,5 @@ class Alert:
         assert second_alert.text == f'Hello {second_name}, Are you sure you want to confirm?'
         second_alert.dismiss()
 
-test9 = Alert()
-test9.alert()
+test9 = TestAlert()
+test9.test_alert()

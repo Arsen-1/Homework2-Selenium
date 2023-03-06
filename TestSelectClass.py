@@ -10,7 +10,7 @@ class TestSelectClass:
         self.driver.get("https://courses.letskodeit.com/practice")
         get_wait = WebDriverWait(self.driver, timeout = 10)
 
-    def select_class(self):
+    def test_select_class(self):
         get_wait = WebDriverWait(self.driver, timeout=20)
         select_class = get_wait.until(expected_conditions.element_to_be_clickable((By.CSS_SELECTOR, "[id='carselect']")))
         select_class.click()
@@ -31,4 +31,4 @@ class TestSelectClass:
 
 
 test4 = TestSelectClass()
-test4.select_class()
+test4.test_select_class()

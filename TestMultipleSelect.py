@@ -10,7 +10,7 @@ class TestMultipuleSelect:
         self.driver.get("https://courses.letskodeit.com/practice")
         get_wait = WebDriverWait(self.driver, timeout = 10)
 
-    def select_class(self):
+    def test_select_class(self):
         get_wait = WebDriverWait(self.driver, timeout=20)
         select_class = get_wait.until(expected_conditions.element_to_be_clickable((By.CSS_SELECTOR, "[id='multiple-select-example']")))
         #select_class.click()
@@ -30,5 +30,5 @@ class TestMultipuleSelect:
 
 
 test5 = TestMultipuleSelect()
-test5.select_class()
+test5.test_select_class()
 #test5.test_apple()

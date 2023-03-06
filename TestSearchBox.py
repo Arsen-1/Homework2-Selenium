@@ -5,18 +5,18 @@ from selenium.webdriver.support.wait import WebDriverWait
 from selenium.webdriver.common.keys import Keys
 
 
-class SearchBox:
+class TestSearchBox:
 
     def __init__(self):
         self.driver = webdriver.Chrome()
         self.driver.get("https://courses.letskodeit.com/practice")
         get_wait = WebDriverWait(self.driver, timeout=10)
 
-    def auto_suggest(self):
+    def test_auto_suggest(self):
         get_wait = WebDriverWait(self.driver, timeout=20)
         search_box = get_wait.until(expected_conditions.element_to_be_clickable((By.CSS_SELECTOR, "[id='autosuggest']")))
         search_box.click()
         search_box.send_keys("auto suggest")
 
-test8 = SearchBox()
-test8.auto_suggest()
+test8 = TestSearchBox()
+test8.test_auto_suggest()
